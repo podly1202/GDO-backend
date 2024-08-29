@@ -14,7 +14,7 @@ public class TestConfiguration extends Configuration {
             new SwaggerBundleConfiguration();
     @JsonProperty("swagger")
     public SwaggerBundleConfiguration getSwagger() {
-        swagger.setResourcePackage("org.example.controllers");
+        swagger.setResourcePackage("org.example.controller");
         String[] schemes = {"http", "https"};
         swagger.setSchemes(schemes);
         swagger.setTitle("GoodDayOrg");

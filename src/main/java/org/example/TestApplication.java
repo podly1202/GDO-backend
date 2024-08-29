@@ -8,7 +8,6 @@ import io.federecio.dropwizard.swagger.SwaggerBundleConfiguration;
 import org.example.controller.JobRoleController;
 import org.example.daos.JobRoleDao;
 import org.example.services.JobRoleService;
-
 public class TestApplication extends Application<TestConfiguration> {
     public static void main(final String[] args) throws Exception {
         new TestApplication().run(args);

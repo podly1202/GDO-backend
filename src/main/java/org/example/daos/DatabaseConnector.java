@@ -18,6 +18,12 @@ public final class DatabaseConnector {
             String password = System.getenv().get("DB_PASSWORD");
             String host = System.getenv().get("DB_HOST");
             String name = System.getenv().get("DB_NAME");
+//            System.out.println(host + "host");
+//            System.out.println(name + "name");
+//            System.out.println(password + "password");
+//            System.out.println(username + "username");
+
+
 
             if (username == null || password == null || host == null
                     || name == null) {
@@ -25,14 +31,16 @@ public final class DatabaseConnector {
                         "Add the following properties to env vars: "
                         + "DB_USERNAME, DB_PASSWORD, DB_HOST and DB_NAME");
             }
-            conn = DriverManager.getConnection(
-                    "jdbc:mysql://" + host + "/" + name, username, password);
-            return conn;
+//            conn = DriverManager.getConnection(
+//                    "jdbc:mysql://" + host + "/" + name, username, password);
+//            return conn;
 
+            conn = DriverManager.getConnection(
+                    host + "/" + name, username, password);
+            return conn;
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
-
         return null;
     }
 }
